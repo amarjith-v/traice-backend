@@ -2,7 +2,7 @@ var db = require('../database');
 
 module.exports = {
     displayImage: function (callback) {
-        var sql = 'SELECT id,imageUrl,image_name FROM images';
+        var sql = 'SELECT id,image_url,image_name FROM images';
         db.query(sql, function (err, data, fields) {
             if (err) throw err
             return callback(data);
